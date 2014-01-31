@@ -37,20 +37,25 @@ IPs=`echo "$A" | cut -d"," -f3  | cut -f1 -d"]" | sort | uniq --count | sort -nr
 TOTALIPs=`echo "$IPs" | wc -l`
 TOPIPs=`echo "$IPs" | head -n 10`
 
+echo -ne '[###################-] (95%) - counting succeeded ...     \r'
+TOTALsucceeded=`echo "$A" | awk '{print $NF}' | grep succeeded | wc -l`
+TOTALfailed=`echo "$A"    | awk '{print $NF}' | grep failed    | wc -l`
 
-echo -ne '[####################] (100%) - analysis completed.   \r'
+echo -ne '[####################] (100%) - analysis completed.       \r'
 echo -ne '\n'
 echo
 
 ################### 
 echo "Total"
-echo " - attempts: $TOTALattempts"
+echo " - attempts :  $TOTALattempts"
+echo "    + succeeded : $TOTALsucceeded"
+echo "    + failed :  $TOTALfailed"
 echo
 echo "Total unique "
-echo " - usernames: $TOTALusernames " 
-echo " - passwords: $TOTALpasswords" 
-echo " - combinations: $TOTALcombinations" 
-echo " - IPs:       $TOTALIPs" 
+echo " - usernames :  $TOTALusernames " 
+echo " - passwords :  $TOTALpasswords" 
+echo " - combinations :  $TOTALcombinations" 
+echo " - IPs:  $TOTALIPs" 
 
 prompt="Pick an option:"
 echo
