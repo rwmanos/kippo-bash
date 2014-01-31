@@ -20,7 +20,9 @@ This is a bash script to analyze kippo text based logs. It needs neither MySQL n
          
         Total
         - attempts: 116885
-         
+          + succeeded : 487
+          + failed :  116398         
+
         Total unique 
         - usernames: 1644 
         - passwords: 24498
