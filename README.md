@@ -47,7 +47,7 @@ Execute kippo-bash.sh
 
 Known issues
 ------------
-If username contains the special character slash '/', whatever is after this character is considered to be password part of the password.
+If the username contains the special character slash '/', whatever is after this character is considered to be part of the password.
 
 
 License
