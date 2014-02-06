@@ -5,14 +5,22 @@ Analysis of kippo logs - text files
 
 This is a bash script to analyze kippo text based logs. It needs neither MySQL nor Apache like the popular web based tools for generating these statistics.
 
-1. If you want to generate graphs gnuplot is required.
+Prerequisites
+-------------
+If you want to generate graphs gnuplot is required.
 
 
         sudo apt-get install gnuplot
 
-2. Set the right path for the kippo logs in the script
 
-3. Execute kippo-bash.sh
+Configuration
+--------------
+Set the right path for the kippo logs in the script
+
+
+Execution
+---------
+Execute kippo-bash.sh
 
 
         ./kippo-bash.sh 
@@ -36,3 +44,12 @@ This is a bash script to analyze kippo text based logs. It needs neither MySQL n
 
 
 ![My image](https://raw.github.com/rwmanos/kippo-bash/master/TOPusernames.png)
+
+Known issues
+------------
+If username contains the special character slash '/', whatever is after this character is considered to be password part of the password.
+
+
+License
+-------
+This is free and unencumbered software released into the public domain.
