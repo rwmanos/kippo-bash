@@ -18,7 +18,7 @@ A=`cat $_file* | grep "login attempt"`
 TOTALattempts=`echo "$A" | wc -l`
 
 echo -ne '[####----------------] (20%) - sorting usernames ... \r'
-usernames=`echo "$A" | cut -d"[" -f3  | cut -f1 -d"/" | sort | uniq --count | sort -nr`
+usernames=`echo "$A" | cut -d"[" -f3-  | cut -f1 -d"/" | sort | uniq --count | sort -nr`
 TOTALusernames=`echo "$usernames" | wc -l`
 TOPusernames=`echo "$usernames" | head -n 10`
 
