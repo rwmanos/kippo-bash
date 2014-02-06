@@ -72,7 +72,7 @@ do
             echo "Top 10 usernames:"
             echo "$TOPusernames"
             echo
-            echo "Top 10 usernames:"
+            echo "Top 10 passwords:"
             echo "$TOPpasswords"
             echo
             echo "Top 10 combinations:"
